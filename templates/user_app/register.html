@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<section class="container-fluid">
+        
+    <form action="{% url 'user_app:register' %}" method="POST">
+        <div class="row">
+            <div class=" col-12 d-flex justify-content-center align-items-center" style="background-color:#62B5E5">
+                <div class="card mx-2 mt-3 mb-3 col-6" style="border: 2px solid black">
+                    <div class="mb-1 p-2 col-12">
+                        <label for="username" class="form-label"></label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                    </div>
+                    <div class="mb-1 p-2 col-12">
+                        <label for="email" class="form-label"></label>
+                        <input type="text/email" class="form-control" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="mb-1 p-2 col-12">
+                        <label for="password" class="form-label"></label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="password">
+                    </div>
+                    <div class="mb-1 p-2 col-12">
+                        <label for="firstname" class="form-label"></label>
+                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+                    </div>
+                    <div class="mb-1 p-2 col-12">
+                        <label for="lastname" class="form-label"></label>
+                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+                    </div>
+                    <button type="submit"  class="btn btn-dark mt-3 mx-5" >Sign Up</button>
+                    <p class="d-flex justify-content-center align-items-center">Already have an account? <a href="{% url 'user_app:login' %}" class="link-primary text-decoration-none">Log In</a></p>
+                    {% csrf_token %}
+                </div>
+            </div>
+            {% include 'footer.html' %}
+        </div>
+    </form>
+</section>
+{% endblock content %}
