@@ -1,9 +1,13 @@
 from django.shortcuts import render
 
+from .models import Need
 # Create your views here.
 
 
 
-def base(request):
+def create_need(request):
 
-    return render(request, 'base.html')
+    # need_list = Need.objects.all()
+                         
+
+    return render(request, 'benov_app/need.html')
