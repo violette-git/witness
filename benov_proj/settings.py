@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'benov_app',
     'tithe_app',
     'user_app',
+    'org_app'
 ]
 
 MIDDLEWARE = [
