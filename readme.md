@@ -4,7 +4,7 @@
 ---
 Churches and Non-Profit Orginizations have always been vulnerable to fraud, but the transition into the information age has pushed this crime into the sunlight quite often over the past decade.
 
-Whether it be an Usher scraping off the top, The Bookkeeper issuing checks to fake companies, or The Pastor using your hard earned money on his new car. ***All the while that church goal is still unmet.*** 
+Whether it be an Usher scraping off the top, The Bookkeeper issuing checks to fake companies, or The Pastor using your hard earned money on his new car. ***All the while, that church goal is still unmet.*** 
 
 This app aims to cut the fraud out before it begins and shine a light into your community, reinforcing a trust in the communities we serve.
 
