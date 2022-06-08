@@ -142,6 +142,50 @@ class Need(models.Model):
 ``````python
 print('data model here')
 ``````
+## Schedule
+---
+### Week #1
+---
+-
+### Week #2
+---
+-
+### Week #3
+---
+-
+### Week #4
+---
+-
+
+## Must Haves
+---
+- Need Creation.
+- Ability to join multiple orginizations.
+- Ability to contribute to a need.
+- Ability to see every payment and withdrawal.
+
+
+## Should Haves
+---
+- User Dashboard.
+- SwiperJs CDN.
+- Mobile Friendly/Responsive.
+## Can Haves
+---
+- Custom Admin Dashboard.
+- Crypto Payment.
+- Public Messages.
+- Donate Page.
+
+---
+# Stretch Goal
+---
+- ReactNative Rebuild.
+- Javascript Animation.
+- Advertising / Customer Generation.
+- Host with Netlify.
+
+
 
 
 
