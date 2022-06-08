@@ -6,7 +6,6 @@ app_name = 'benov_app'
 
 urlpatterns = [
 
-    path('', views.base, name='base'),
-    # path('create/', views.create, name='create'),
+    path('create/', views.create_need, name='create_need'),
 
 ] 
