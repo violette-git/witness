@@ -11,18 +11,28 @@ This app aims to cut the fraud out before it begins and shine a light into your 
 ---
 ## **Features**
 ---
-*As a community member, I want to be able to make payments to, and view all payments made to my orginization.*
+*As a community member, I want to be able to make payments to, view all payments made to, and see all withdrawals made by my orginization.*
 
 ---
 ### Tasks:
-- ihihini
-- khvkiugc
+- Create Django models for user.
+- Create Django models for tithe.
+- Create Django models for offering.
+- Create a form for signup, tith, offering.
+- Create a view with returned form data.
+- Design profile view.
+-
 
 ### Additional Features
 
-- iufyiuf
-- khgcdiytdc
-- igiytf
+- User Dashboard.
+- Anonymize Usernames.
+- Previously Visited.
+- Paypal Integration.
+- Stripe Integration.
+- Crypto Integration.
+- Javascript Interactivity.
+- 
 ### Data Model
 ---
 ``````python
@@ -75,18 +85,19 @@ class Offering(models.Model):
 ``````
 
 ---
-*As a community member, I want to be able to receive payments from orginizations, community members, and view all payments made to my orginization.*
+*As a community member, I want to be able to receive payments from orginizations, community members, withdraw funds on behalf of my orginization, and view all payments made to my orginization.*
 
 ---
 ### Tasks:
-- ihihini
-- khvkiugc
+- Create a Django model for need.
+- Create a form form for need.
+- Create a view with returned data.
+- 
 
 ### Additional Features
 
-- iufyiuf
-- khgcdiytdc
-- igiytf
+- Javascript Interactivity
+- 
 ### Data Model
 ---
 ``````python
@@ -110,23 +121,27 @@ class Need(models.Model):
 
 ``````
 ---
-*As a community admin, I want to be able to create goals, refund payments, view number of memebers, and view all payments made to my orginization.*
+*As a community admin, I want to be able to create goals, refund payments, view number of members, and view all payments made to my orginization.*
 
 ---
 ### Tasks:
-- ihihini
-- khvkiugc
+- Create register form for community admin.
+-
 
 
 ### Additional Features
 
-- iufyiuf
-- khgcdiytdc
-- igiytf
+- Create admin user model.
+- Upon return and verification of orginization, create admin account.
+- Create admin dashboard.
+-
 
 ---
 ### Data Model
 ---
+``````python
+print('data model here')
+``````
 
 
 
