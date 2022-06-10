@@ -72,7 +72,7 @@ This app aims to cut the fraud out before it begins and shine a light into your 
 </br>
 
 ### ***User***
----
+
 |Variable|Field Type|Properties|
 |--------|---------|---------|
 |username|CharField|max_length=23,unique=True|
@@ -84,7 +84,7 @@ This app aims to cut the fraud out before it begins and shine a light into your 
 </br>
 
 ### ***Need***
----
+
 
 |Variable|Field Type|Properties|
 |--------|---------|---------|
@@ -96,7 +96,7 @@ This app aims to cut the fraud out before it begins and shine a light into your 
 </br>
 
 ### ***Offering***
----
+
 
 |Variable|Field Type|Properties|
 |--------|---------|---------|
@@ -108,7 +108,7 @@ This app aims to cut the fraud out before it begins and shine a light into your 
 
 
 ### ***Orginization***
----
+
 
 |Variable|Field Type|Properties|
 |--------|---------|---------|
@@ -122,7 +122,7 @@ This app aims to cut the fraud out before it begins and shine a light into your 
 </br>
 
 ### ***Goal***
----
+
 
 |Variable|Field Type|Properties|
 |--------|---------|---------|
