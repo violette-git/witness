@@ -66,7 +66,7 @@ This app aims to cut the fraud out before it begins and shine a light into your 
 -
 
 ---
-## Data Model
+## Data Models
 ---
 
 </br>
