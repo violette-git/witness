@@ -34,83 +34,13 @@
         </script>
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- SWIPERJS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
     <title>witness</title>
 </head>
-
-{% if request.user.is_authenticated %}
-<nav class="navbar navbar-expand-lg d-flex " style="background-color:#a11477" id="fixed-nav">
-    <div class="container-fluid d-flex">
-        <a class="navbar-brand text-light" href="{% url 'user_app:base' %}">Logo</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 py-2 d-flex  align-items-center justify-content-end">
-                <li class="nav-item dropdown d-flex justify-content-end">
-                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Register
-                    </a>
-                    <ul class="dropdown-menu bg-dark shadow" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-light" href="{% url 'org_app:create-org' %}">Organization</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item d-flex justify-content-end">
-                    <a class="nav-link text-light" aria-current="page" href="{% url 'user_app:base' %}">Home</a>
-                </li>
-                <li class="nav-item d-flex justify-content-end">
-                    <a class="nav-link text-light" href="{% url 'user_app:profile' request.user %}">Profile</a>
-                </li>
-                <li class="nav-item d-flex justify-content-end">
-                    <a class="nav-link text-light" href="{% url 'user_app:logout' %}">Logout</a>
-                </li>
-                <li class="nav-item d-flex justify-content-end">
-                    <a class="btn btn-bd-download text-light text-decoration-none" style="background-color:#a11477; font-weight:bold; border-radius: 50%;" href="#">Download</a>
-                </li>
-            </ul>
-            
-        </div>
-    </div>
-</nav>
-{% endif %}
-
-{% if not request.user.is_authenticated %}
-<nav class="navbar navbar-expand-lg bg-dark" id="fixed-nav">
-    <div class="container-fluid">
-        <a class="navbar-brand text-light" href="{% url 'user_app:base' %}">Logo</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Register
-                    </a>
-                    <ul class="dropdown-menu bg-dark shadow" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-light" href="#">Organization</a></li>
-                        <li><a class="dropdown-item text-light" href="{% url 'user_app:register' %}">Member</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="{% url 'user_app:login' %}">Login</a>
-                </li>
-                <li class="nav-item d-flex justify-content-end">
-                    <a class="btn btn-bd-download text-light text-decoration-none" style="background-color:#a11477; font-weight:bold; border-radius: 20%;" href="#">Download</a>
-                </li>
-            </ul>
-            
-        </div>
-    </div>
-</nav>
-{% endif %}
-
-
-<body>
+{% include 'navbar.html' %}
+<!-- <body>
     <section class="container-fluid">
         <div class="row">
             <div class="col-12" height="100vh" style="background-color:#a11477; height: 100vh;">
@@ -136,15 +66,97 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
         </script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+</body> -->
+<!-- Demo styles -->
+
+<body>
+    
+    <!-- Swiper -->
+    <div class="swiper mySwiper swiper-initialized swiper-vertical swiper-pointer-events swiper-backface-hidden">
+        <div class="swiper-wrapper" id="swiper-wrapper-88ed66a468cb65c8" aria-live="polite"
+            style="transition-duration: 0ms; transform: translate3d(0px, -3876px, 0px);">
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 9" style="height: 616px; margin-bottom: 30px; background-color:#a11477;">
+                Slide 1
+            </div>
+            <div class="swiper-slide" role="group" aria-label="2 / 9" style="height: 100vh; margin-bottom: 30px;background-color:#a11477;">
+                Slide 2
+            </div>
+            <div class="swiper-slide" role="group" aria-label="3 / 9" style="height: 616px; margin-bottom: 30px;background-color:#a11477;">
+                Slide 3
+            </div>
+            <div class="swiper-slide" role="group" aria-label="4 / 9" style="height: 616px; margin-bottom: 30px;background-color:#a11477;">
+                Slide 4
+            </div>
+            <div class="swiper-slide" role="group" aria-label="5 / 9" style="height: 616px; margin-bottom: 30px;background-color:#a11477;">
+                Slide 5
+            </div>
+            <div class="swiper-slide swiper-slide-prev" role="group" aria-label="6 / 9" style="height: 616px; margin-bottom: 30px;background-color:#a11477;">
+                Slide 6
+            </div>
+            <div class="swiper-slide " role="group" aria-label="7 / 9" style="height: 616px; margin-bottom: 30px;background-color:#a11477;">
+                Slide 7
+            </div>
+            <div class="swiper-slide swiper-slide-next" role="group" aria-label="8 / 9" style="height: 616px; margin-bottom: 30px;background-color:#a11477;">
+                Slide 8
+            </div>
+            <div class="swiper-slide" role="group" aria-label="9 / 9" style="height: 616px; margin-bottom: 30px;background-color:#a11477;">
+                Slide 9
+            </div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-vertical">
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1">
+            </span>
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2">
+            </span>
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3">
+            </span>
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4">
+            </span>
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5">
+            </span>
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6">
+            </span>
+            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 7" aria-current="true">
+            </span>
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8">
+            </span>
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9">
+            </span>
+        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true">
+
+        </span>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            slidesPerView: 1,
+            spaceBetween: 0,
+            mousewheel: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
 
 
 </body>
-
-</html>
-{% include 'footer.html' %}
-
 {% block content %}
 
 
 
 {% endblock content %}
+
+
+
+
+</html>
+{% include 'footer.html' %}

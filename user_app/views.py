@@ -13,7 +13,7 @@ from .models import User
 # Create your views here.
 def base(request):
 
-    return render(request, 'base.html')
+    return render(request, 'index.html')
 
 
 def register(request):

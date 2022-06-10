@@ -1,0 +1,81 @@
+{% if request.user.is_authenticated %}
+<div>
+    <nav class="navbar navbar-expand-sm text-light" style="background-color:#a11477" id="fixed-nav">
+        <div class="container-fluid ">
+            <a class="navbar-brand text-light py-3" href="{% url 'user_app:base' %}">Logo</a>
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon navbar-dark"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 py-2 px-4 gap-4" style='font-weight:bold'>
+                <li class="nav-item dropdown"style='z-index: 999'>
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Register
+                    </a>
+                    <ul class="dropdown-menu" style="background-color:#a11477; z-index: 999" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item text-light" href="{% url 'org_app:create-org' %}">Organization</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{% url 'user_app:profile' request.user %}">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{% url 'user_app:logout' %}">Logout</a>
+                </li>
+                <li class="nav-item pr-5">
+                    <a class="btn btn-bd-download text-light text-decoration-none"
+                        style="background-color:#a11477; font-weight:bold; border: 2px solid white"
+                        href="#">Download</a>
+                </li>
+            </ul>
+
+        </div>
+</div>
+</nav>
+</div>
+{% endif %}
+
+{% if not request.user.is_authenticated %}
+<div>
+    <nav class="navbar navbar-expand-sm" style="background-color:#a11477;" id="fixed-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light py-3" href="{% url 'user_app:base' %}">Logo</a>
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon navbar-dark"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 py-2 px-4 gap-4" style='font-weight:bold'>
+                <li class="nav-item dropdown"style='z-index: 999'>
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Register
+                    </a>
+                    <ul class="dropdown-menu shadow" style="background-color:#a11477; z-index: 999" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item text-light" href="{% url 'org_app:create-org' %}">Organization</a>
+                        </li>
+                        <li><a class="dropdown-item text-light" href="{% url 'user_app:register' %}">Member</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{% url 'user_app:login' %}">Login</a>
+                </li>
+                <li class="nav-item pr-5">
+                    <a class="btn btn-bd-download text-light text-decoration-none"
+                        style="background-color:#a11477; font-weight:bold; border: 2px solid white; margin-right: 40px"
+                        href="#">Download</a>
+                </li>
+            </ul>
+
+        </div>
+</div>
+</nav>
+</div>
+{% endif %}
