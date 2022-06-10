@@ -87,11 +87,11 @@ def profile(request, username):
 
         context = {
 
-            'username': user,
+            'username': request.user,
             
         }
 
-        return render(request, 'user_app/profile.html', context)
+        return render(request, 'user_app/mem-dashboard.html', context)
 
 
 
@@ -102,3 +102,7 @@ def logout(request):
     django_logout(request)
 
     return redirect('user_app:base')
+
+# ----------------------------------------------------------------------------
+
+

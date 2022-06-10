@@ -1,3 +1,11 @@
-colour1: #e13661 red
+#fixed-nav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+}
+
+/* colour1: #e13661 red
 colour2: #fd4c55 orange
-colour3: #a11477 purple
+colour3: #a11477 purple */
