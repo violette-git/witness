@@ -94,6 +94,7 @@ This app aims to cut the fraud out before it begins and shine a light into your 
 |date_created|BooleanField|auto_now_add=True|
 |date_edited|BooleanFieldauto_now=True|
 </br>
+
 ### ***Offering***
 ---
 
