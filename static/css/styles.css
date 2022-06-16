@@ -1,52 +1,49 @@
 #fixed-nav {
+    background-color:#a11477;
     z-index:999;
     overflow: visible;
     position: absolute;
-    position: fixed; /*Set the navbar to fixed position*/
-    top: 0; /* Position the navbar at the top of the page */
+    position: fixed; 
+    top: 0; 
     width: 100%;
-    /* display: flex;
-    justify-content: flex-end; */
+   
 
 }
 
 .navbar-dark .navbar-toggler-icon{
 background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 255%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 }
+
 #end {
 
     display: flex;
     justify-content: flex-end;
 }
 
-html,body {
-    z-index: 1;
+
+html, body {
     position: relative;
     height: 100%;
+    z-index:1
 }
 
 body {
-
-    z-index: 1;
-    position: relative;
     background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
-    margin-top: 72px;
+    margin: 0;
     padding: 0;
+    z-index:1
 }
 
 .swiper {
-/* position: relative; */
-    z-index: 1;
     width: 100%;
     height: 100%;
+    z-index:1
 }
 
 .swiper-slide {
-    z-index: 1;
-    position: relative;
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -64,14 +61,29 @@ body {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+    z-index:1
 }
 
 .swiper-slide img {
-/* position: relative; */
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index:1
+}
+
+/* #pass-under {
+
+    position: relative;
+    z-index: 1;
+} */
+
+#tester {
+
+    height: 80px;
+    margin-bottom: 80px;
+    border:none;
+    z-index:1
 }
 
 /* colour1: #e13661 red

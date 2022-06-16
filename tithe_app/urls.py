@@ -6,7 +6,7 @@ app_name = 'tithe_app'
 
 urlpatterns = [
 
-    path('', views.base, name='base'),
-    # path('create/', views.create, name='create'),
+    # path('', views.base, name='base'),
+    path('create/', views.create, name='create'),
 
 ] 

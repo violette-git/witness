@@ -1,40 +1,71 @@
-{% extends 'base.html' %}
-{% include 'navbar.html' %}
-{% block content %}
-<section class="container-fluid">
-        
-    <form action="{% url 'org_app:create-org' %}" method="POST">
-        <div class="row">
-            <div class=" col-12 d-flex justify-content-center align-items-center" style="background-color:#62B5E5">
-                <div class="card mx-2 mt-3 mb-3 col-6 shadow-lg" style="border: 2px solid black">
-                    <div class="mb-1 p-2 col-12">
-                        <label for="business_name" class="form-label"></label>
-                        <input type="text" class="form-control" id="business_name" name="business_name" placeholder="Business Name">
-                    </div>
-                    <div class="mb-1 p-2 col-12">
-                        <label for="website_url" class="form-label"></label>
-                        <input type="url" class="form-control" id="website_url" name="website_url" placeholder="Website">
-                    </div>
-                    <div class="mb-1 p-2 col-12">
-                        <label for="facebook_url" class="form-label"></label>
-                        <input type="url" class="form-control" id="facebook_url" name="facebook_url" placeholder="Facebook">
-                    </div>
-                    <div class="mb-1 p-2 col-12">
-                        <label for="mission_statement" class="form-label"></label>
-                        <input type="text" class="form-control" id="mission_statement" name="mission_statement" placeholder="Mission Statement">
-                    </div>
-                    
-                    <p class="d-flex justify-content-center align-items-center">Is this a Non-Profit?
+{% load static %}
 
-                        <input type="checkbox" class="pl-5" id="is_nonprofit" name="is_nonprofit" placeholder="Non-Profit?">
-                    </p>
-                    
-                    <button type="submit"  class="btn btn-dark mt-3 mx-5" >Register</button>
-                    <p class="d-flex justify-content-center align-items-center">Already have an account? <a href="{% url 'user_app:login' %}" class="link-primary text-decoration-none">Log In</a></p>
-                    {% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>witness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+    async=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
+    </script>
+
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="card" id="tester">
+        test
+    </div>
+    <section class="container">
+        
+        <form action="{% url 'org_app:create-org' %}" method="POST">
+            <div class="row">
+                <div class=" col-12 d-flex justify-content-center align-items-center" style="background-color:#62B5E5">
+                    <div class="card mx-2 mt-3 mb-3 col-6 shadow-lg" style="border: 2px solid black">
+                        <div class="mb-1 p-2 col-12">
+                            <label for="business_name" class="form-label"></label>
+                            <input type="text" class="form-control" id="business_name" name="business_name" placeholder="Business Name">
+                        </div>
+                        <div class="mb-1 p-2 col-12">
+                            <label for="website_url" class="form-label"></label>
+                            <input type="url" class="form-control" id="website_url" name="website_url" placeholder="Website">
+                        </div>
+                        <div class="mb-1 p-2 col-12">
+                            <label for="facebook_url" class="form-label"></label>
+                            <input type="url" class="form-control" id="facebook_url" name="facebook_url" placeholder="Facebook">
+                        </div>
+                        <div class="mb-1 p-2 col-12">
+                            <label for="mission_statement" class="form-label"></label>
+                            <textarea  class="form-control" id="mission_statement" name="mission_statement" placeholder="Mission Statement" style="resize:none" rows="5"></textarea>
+                        </div>
+                        
+                        <p class="d-flex justify-content-center align-items-center">Is this a Non-Profit?
+                            
+                            <input type="checkbox" class="pl-5" id="is_nonprofit" name="is_nonprofit" placeholder="Non-Profit?">
+                        </p>
+                        
+                        <button type="submit"  class="btn btn-dark my-3 mx-5" >Register</button>
+                        {% csrf_token %}
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
-</section>
-{% endblock content %}
+        </form>
+    </section>
+</body>
