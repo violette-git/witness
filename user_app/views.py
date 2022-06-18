@@ -13,7 +13,7 @@ from .models import User
 # Create your views here.
 def base(request):
 
-    return render(request, 'index.html')
+    return render(request, 'base.html')
 
 
 def register(request):
@@ -30,16 +30,16 @@ def register(request):
 
         password = form.get('password')
 
-        firstname = form.get('firstname')
+        first_name = form.get('first-name')
 
-        lastname = form.get('lastname')
+        last_name = form.get('last-name')
 
         email = form.get('email')
 
         user = User.objects.create_user(
 
-            firstname=firstname,
-            lastname=lastname,
+            first_name=first_name,
+            last_name=last_name,
             email=email,
             username=username,
             password=password,

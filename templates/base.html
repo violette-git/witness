@@ -1,162 +1,59 @@
 {% load static %}
 
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>witness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+  integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+  </script> 
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-    <!-- BOOTSTRAP ICONS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
-    <!-- BOOTSTRAP MASONRY PLUGIN -->
-    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
-        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
-        async></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
-        </script>
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <!-- SWIPERJS CDN -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-
-    <title>witness</title>
+  <!-- Demo styles -->
+  
 </head>
-{% include 'navbar.html' %}
-<!-- <body>
-    <section class="container-fluid">
-        <div class="row">
-            <div class="col-12" height="100vh" style="background-color:#a11477; height: 100vh;">
-                a
-            </div>
-            <div class="col-4 bg-danger">
-                b
-            </div>
-            <div class="col-4 bg-success">
-                c
-            </div>
-            <div class="col-4 bg-primary">
-                d
-            </div>
-        </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
-        </script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
-</body> -->
-<!-- Demo styles -->
 
 <body>
-    
-    <!-- Swiper -->
-    <div class="swiper mySwiper swiper-initialized swiper-vertical swiper-pointer-events swiper-backface-hidden">
-        <div class="swiper-wrapper" id="swiper-wrapper-88ed66a468cb65c8" aria-live="polite"
-            style="transition-duration: 0ms; transform: translate3d(0px, -3876px, 0px);">
-            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 9" style="height: 616px; margin-bottom: 30px; background-color:#a11477;">
-                Slide 1
-            </div>
-            <div class="swiper-slide" role="group" aria-label="2 / 9" style="height: 100vh; margin-bottom: 30px;background-color:#a11477;">
-                Slide 2
-            </div>
-            <div class="swiper-slide" role="group" aria-label="3 / 9" style="height: 616px; margin-bottom: 30px;background-color:#a11477;">
-                Slide 3
-            </div>
-            <div class="swiper-slide" role="group" aria-label="4 / 9" style="height: 616px; margin-bottom: 30px;background-color:#a11477;">
-                Slide 4
-            </div>
-            <div class="swiper-slide" role="group" aria-label="5 / 9" style="height: 616px; margin-bottom: 30px;background-color:#a11477;">
-                Slide 5
-            </div>
-            <div class="swiper-slide swiper-slide-prev" role="group" aria-label="6 / 9" style="height: 616px; margin-bottom: 30px;background-color:#a11477;">
-                Slide 6
-            </div>
-            <div class="swiper-slide " role="group" aria-label="7 / 9" style="height: 616px; margin-bottom: 30px;background-color:#a11477;">
-                Slide 7
-            </div>
-            <div class="swiper-slide swiper-slide-next" role="group" aria-label="8 / 9" style="height: 616px; margin-bottom: 30px;background-color:#a11477;">
-                Slide 8
-            </div>
-            <div class="swiper-slide" role="group" aria-label="9 / 9" style="height: 616px; margin-bottom: 30px;background-color:#a11477;">
-                Slide 9
-            </div>
-        </div>
-        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-vertical">
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1">
-            </span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2">
-            </span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3">
-            </span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4">
-            </span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5">
-            </span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6">
-            </span>
-            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 7" aria-current="true">
-            </span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8">
-            </span>
-            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9">
-            </span>
-        </div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true">
+  {% include 'navbar.html' %}
+  <!-- Swiper -->
+  <div class="swiper mySwiper swiper-initialized swiper-vertical swiper-pointer-events swiper-backface-hidden">
+    <div class="swiper-wrapper" id="swiper-wrapper-3a1a443022699be1" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+      <div class="swiper-slide swiper-slide-active d-flex justify-content-center align-items-center"  role="group" aria-label="1 / 9" style="height: 534px; margin-bottom: 30px;">
+        Slide 1
+      </div>
+      <div class="swiper-slide swiper-slide-next d-flex justify-content-center align-items-center" style="background-color:#a11477" role="group" aria-label="2 / 9" style="height: 534px; margin-bottom: 30px;">
+        Slide 2
+      </div>
+      <div class="swiper-slide d-flex justify-content-center align-items-center" style="background-color:#a11477" role="group" aria-label="3 / 9" style="height: 534px; margin-bottom: 30px;">
+        Slide 3
+      </div>
+      <div class="swiper-slide d-flex justify-content-center align-items-center" style="background-color:#a11477" role="group" aria-label="4 / 9" style="height: 534px; margin-bottom: 30px;">
+        Slide 4
+      </div>
 
-        </span>
     </div>
+    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-vertical"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9"></span></div>
+  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            direction: "vertical",
-            slidesPerView: 1,
-            spaceBetween: 0,
-            mousewheel: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
-
-
-</body>
-{% block content %}
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 0,
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 
 
-
-{% endblock content %}
-
-
-
-
-</html>
-{% include 'footer.html' %}
+</body></html>

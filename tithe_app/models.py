@@ -5,9 +5,14 @@ from django.core.validators import MinValueValidator
 
 
 # Create your models here.
+TYPE = (
+    ('food', 'Food'),
+    ('housing', 'Housing'),
+    ('',''),
+
+)
 
 min = 0.00
-
 class Offering(models.Model):
 
     amount = models.FloatField(validators=[MinValueValidator(min)])
@@ -26,4 +31,23 @@ class Offering(models.Model):
 
         else:
             
-            return f"Paid tiithes in the amount of {self.amount} on {self.date}."
+            return f"Paid tithes in the amount of {self.amount} on {self.date}."
+
+
+
+
+class Need(models.Model):
+
+    title = models.CharField(max_length=50)
+
+    cost = models.FloatField(validators=[MinValueValidator(min)])
+
+    type = models.CharField(max_length=50, choices=TYPE, default='')
+
+    date_created = models.DateTimeField(auto_now_add=True)
+
+    date_edited = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+
+        return f"Member needs {self.cost} for {self.title}."
