@@ -39,6 +39,8 @@ class Offering(models.Model):
 
 class Need(models.Model):
 
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='needs', null=False, blank=False )
+
     title = models.CharField(max_length=50)
 
     cost = models.FloatField(validators=[MinValueValidator(min)])
@@ -48,6 +50,8 @@ class Need(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
 
     date_edited = models.DateTimeField(auto_now=True)
+
+    description = models.CharField(max_length=300, blank='False')
 
     # def field for percentage
 

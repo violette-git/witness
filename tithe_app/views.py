@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from tithe_app.models import Need
+from user_app.models import User
 
 # Create your views here.
 
@@ -24,7 +25,8 @@ def create(request):
         Need.objects.create(
             title=title,
             type=type,
-            cost=cost
+            cost=cost,
+            user=request.user
         )
 
         context = {
@@ -42,7 +44,8 @@ def needsbutton(request):
 
     context = {
 
-        'needs': Need.objects.all().order_by('-date_created')
+        'needs': Need.objects.all().order_by('-date_created'),
+        'users': User.objects.all()
         
     }
     return render(request, 'tithe_app/need.html', context)

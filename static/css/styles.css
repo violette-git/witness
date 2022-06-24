@@ -131,6 +131,16 @@ body {
         flex-direction:column;
         
     }
+
+    #need-icon {
+        flex-direction:row;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #need-icon {
+        flex-direction:column
+    }
 }
 
 /* @media only screen and (min-width: 3072px) {
