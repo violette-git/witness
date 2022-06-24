@@ -4,7 +4,7 @@ from django.core.validators import MinValueValidator
 from tithe_app.models import Offering
 
 
-
+min = 0.00
 class Organization(models.Model):
 
     business_name = models.CharField(max_length=70)
@@ -15,16 +15,20 @@ class Organization(models.Model):
 
     mission_statement = models.CharField(max_length=1000, blank=True, null=True)
     
-    members = models.ManyToManyField(User, related_name='member')
+    members = models.ManyToManyField(User, related_name='member', blank=True, null=True)
 
-    offering = models.ForeignKey(Offering, on_delete=models.CASCADE, related_name='offerings')
+    offering = models.ForeignKey(Offering, on_delete=models.CASCADE, related_name='offerings', blank=True, null=True)
 
     is_nonprofit = models.BooleanField(default=False, verbose_name='Non-Profit')
+
+    goal = models.ForeignKey('Goal', on_delete=models.CASCADE, related_name='organizations', blank=True, null=True )
 
 
 # ----------------------------------------------------------------------------------------------
 
 class Goal(models.Model):
+
+    organization = models.ForeignKey(Organization, on_delete=models.SET_NULL, null='True', related_name='goals')
 
     title =  models.CharField(max_length=70)
 
