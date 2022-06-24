@@ -8,7 +8,8 @@ from django.core.validators import MinValueValidator
 TYPE = (
     ('food', 'Food'),
     ('housing', 'Housing'),
-    ('',''),
+    ('clothing', 'Clothing'),
+    ('other','Other'),
 
 )
 
@@ -47,6 +48,8 @@ class Need(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
 
     date_edited = models.DateTimeField(auto_now=True)
+
+    # def field for percentage
 
     def __str__(self) -> str:
 

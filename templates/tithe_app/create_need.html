@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Create Need</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
+  </script>
+
+</head>
+
+<body>
+  <section class="container-fluid">
+    <div class="row">
+      <div class="offset-3 col-6 mt-3 mt-5 shadow-lg" style="border: 2px solid black">
+        <form action="{% url 'tithe_app:create' %}" method="POST">
+          <div class="mb-1 p-2 col-12">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="short title explaining what you need funds for..">
+          </div>
+          <div class="mb-1 p-2 col-12">
+            <label for="cost" class="form-label">How much do you need?</label>
+            <input type="text" class="form-control" id="cost" name="cost" placeholder="how much do you need?">
+          </div>
+          <div class="input-group mb-1 p-2 col-12">
+            <select class="custom-select mb-1 col-12" id="type" name="type">
+              <option selected>Type of funding</option>
+              <option value="Housing" id="Housing" name="Housing">Housing</option>
+              <option value="Food" id="Food" name="Food">Food</option>
+              <option value="Other" id="Other" name="Other">Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-dark mb-3">Create</button>
+
+          {% csrf_token %}
+
+
+        </form>
+        </div>
+      </div>
+  </section>
+
+</body>
