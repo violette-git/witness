@@ -8,5 +8,6 @@ urlpatterns = [
 
     path('needs-list', views.needsbutton, name='needsbutton'),
     path('create/', views.create, name='create'),
+    path('contribute/', views.contribute, name='contribute'),
 
 ] 
