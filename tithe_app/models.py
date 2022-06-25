@@ -20,19 +20,21 @@ class Offering(models.Model):
 
     date = models.DateTimeField(auto_now_add=True)
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='offering')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='offering', null=True)
 
     is_tithe = models.BooleanField(default=False, verbose_name='Tithe')
 
-    def __str__(self) -> str:
+    need = models.ForeignKey('Need', on_delete=models.CASCADE, related_name='offerings')
 
-        if self.is_tithe == False:
+    # def __str__(self) -> str:
+
+    #     if self.is_tithe == False:
         
-            return f"Paid offering in the amount of {self.amount} on {self.date}."
+    #         return f"Paid offering in the amount of {self.amount} on {self.date}."
 
-        else:
+    #     else:
             
-            return f"Paid tithes in the amount of {self.amount} on {self.date}."
+    #         return f"Paid tithes in the amount of {self.amount} on {self.date}."
 
 
 
