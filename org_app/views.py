@@ -60,28 +60,37 @@ def orgs(request):
 
     organizations = Organization.objects.all()
 
-    if request.method == 'POST':
+    search = ''
+
+    if request.method == 'GET':
+
+        context = {
+
+            'organizations':organizations,
+        }
+
+        return render(request, 'org_app/organizations.html', context)
+
+    elif request.method == 'POST':
 
         form = request.POST
 
         search = form.get('search') or ''
 
-        if search:
+        print(search)
 
-            organizations = organizations.filter(
+        organizations = organizations.filter(
 
-                Q(name__icontains=search)
-            )
+            Q(business_name__icontains=search),
+            # Q(state__icontains=search),
+            # Q(city__icontains=search)
+        )
 
-    context = {
+        context = {
 
-        'organizations':organizations,
-    }
+            'organizations':organizations,
+        }
 
-    if request.method == 'GET':
+        print(organizations)
 
         return render(request, 'org_app/organizations.html', context)
-
-
-
-    return render(request, 'org_app/organizations.html', context)
