@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Need list</title>
+    <title>Organizations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"
@@ -23,16 +23,16 @@
 
 </head>
 
-<body style="background-color:">    
+<body style="background-color:#d7dfe1">    
     <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left shadow-lg" style="width:150px;background-color:#02567a"
         id="mySidebar">
         <button class="w3-bar-item w3-button w3-medium w3-hide-large" onclick="w3_close()">&times;</button>
-        <div class="d-flex justify-content-center py-5">
+        <div class="d-flex justify-content-center pb-5">
             <a href="{% url 'user_app:base' %}">
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="80px" height="50px"
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="80px" height="80px"
                     viewBox="0 0 601.000000 460.000000" preserveAspectRatio="xMidYMid meet">
 
-                    <g transform="translate(0.000000,460.000000) scale(0.100000,-0.100000)" fill="#d7dfe1" stroke="none">
+                    <g transform="translate(0.000000,460.000000) scale(0.100000,-0.100000)" fill="#e98607" stroke="none">
                         <path d="M2983 3708 c-57 -15 -66 -41 -71 -211 -6 -191 7 -283 43 -314 14 -13
             39 -23 55 -23 16 0 41 10 55 23 36 30 48 120 44 313 -4 164 -6 171 -66 205
             -21 12 -36 14 -60 7z" />
@@ -72,72 +72,60 @@
         <a id="nav-font" href="{% url 'tithe_app:needsbutton' %}" class="w3-bar-item w3-button">Needs</a>
     </div>
     <section class="container-fluid p-0">
-        <div class="w3-main row" style="margin-left:150px;">
-            <div class='row p-0 m-0' style='background-color:;border-bottom: 2px solid #d7dfe1;'>
-                <form class="col-12 py-4 px-5 d-flex justify-content-around align-items-center"style='background-color:#02567a' action="{% url 'org_app:orgs' %}">
-                    <div class="input-group">
-                        <input type="search" id="seacrh" name="search" class="form-control rounded" style="background-color:#d7dfe1" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                    </div>
-                    <button type="submit" class="btn btn-outline-primary mx-2" >search</button>
-
-                </form>
-            </div>
-            <div class="accordion py-5" id="collapse-{{ forloop.counter }}">            
-                {% for need in needs %}
-                <div class="accordion-item" >
-                    <h2 class="accordion-header my-0 " style="border-radius:4px;" id="heading-{{ forloop.counter }} ">
-                        <button class="accordion-button collapsed"style='background-color:#d7dfe1;' type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse-{{ forloop.counter }}" aria-expanded="true"
-                            aria-controls="collapse-{{ forloop.counter }}">
-                            {{ need.title|title }}
-                        </button>
-                    </h2>
-                    <div id="collapse-{{ forloop.counter }}" class="accordion-collapse collapse row"
-                        aria-labelledby="heading-{{ forloop.counter }}">
-                        <div class="accordion-body col-lg-6 col-xl-6 col-xxl-6 col-md-6 col-sm-6 col-xs-6 d-flex flex-column px-5">
-                            <strong>Created: {{ need.date_created }} </strong>
-                            </br>
-                            <strong>Type: {{ need.type }}</strong>
-                            </br>
-                            <strong>Asking for: ${{ need.cost }}</strong>
-                            </br>
-                            <strong>Member: {{ need.user }} </strong>
-                            </br>
-                            <strong>Description: {{ need.description }} </strong>
-                            <strong hidden id="amount-don-{{ forloop.counter }}" value="{{ need.donated_amount }}">Donated amount: ${{ need.donated_amount }}</strong>
-                            </br>
-                            <strong hidden id='perc-don-{{ forloop.counter }}' value="{{ need.percentage_donated }}">Percentage donated: {{ need.percentage_donated }}%</strong>
-                            </br>
-                        
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5 col-xl-5 col-xxl-5">
-                            <canvas class="myChart" id="myChart-{{ forloop.counter }}" value='{{ forloop.counter }}' width="400" height="400"></canvas>
-                        </div>
-                        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-1 col-xl-1 col-xxl-1 d-flex justify-content-around align-items-center"
-                            id='need-icon'>
-                            <a href="#">
-                                <i class="bi bi-check-square-fill" style="font-size:1.5rem"></i>
-
-                            </a>
-                            <a href="{% url 'tithe_app:contribute' need.id %}" id="pay-button">
-                                <i class="bi bi-currency-dollar" style="font-size:1.5rem"></i>
-
-                            </a>
-                            <a href="{% url 'tithe_app:need-details' need.id %}">
-                                <i class="bi bi-plus-square" style="font-size:1.5rem"></i>
-
-                            </a>
-                            <a href="#">
-                                <i class="bi bi-person-square" style="font-size:1.5rem"></i>
-
-                            </a>
-                        </div>
-                    </div>
-                
+        <div class="w3-main row shadow-lg" style="margin-left:150px;">
+            <button class="w3-button w3-xlarge w3-hide-large col-1"style='background-color:#e98607' onclick="w3_open()">&#9776;</button>
+            <h1 class="d-flex justify-content-center align-items-center col-10 col-sm-10 col-md-10 col-lg-10 col-xl-12 col-xxl-12 m-0 py-3"style='background-color:#e98607' id="layout-2">
+                Organizations
+            </h1>
+            <div class="col-1"style='background-color:#e98607'></div>
+            <form class="col-12 py-4 px-5 d-flex justify-content-around align-items-center"style='background-color:#e98607;border-bottom: 2px solid #d7dfe1' action="{% url 'org_app:orgs' %}" method="POST">
+                <div class="input-group">
+                    <input type="text" id="seacrh" name="search" class="form-control rounded" style="background-color:#d7dfe1" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                 </div>
-                {% endfor %}
+                <button type="submit" class="btn btn-outline mx-2" style="background-color:#d7dfe1; color:#02567a">search</button>
+                {% csrf_token %}
+            </form>
+            <div class="row p-0">
+                <div class="col-12 p-0 m-0">
+
+                    <table class="table">
+                        <thead style="border-bottom: 4px solid #e98607">
+                            <tr>
+                                <th style="background-color:#093649"class="m-0" scope="col"></th>
+                                <th id="teko" style="background-color:#02567a" scope="col">Name</th>
+                                <th id="teko-2" scope="col">Address</th>
+                                <th id="teko" style="background-color:#02567a" scope="col">City</th>
+                                <th id="teko-2" scope="col">State</th>
+                                <!-- <th id="teko" style="background-color:#02567a" scope="col">Website</th> -->
+                                <!-- <th scope="col">Statement</th> -->
+                            </tr>
+                        </thead>
+                        {% for org in organizations %}
+                        <tbody style="border-bottom: 2px solid #e98607">
+                          <tr>
+                            <th style="background-color:#093649" class='m-0' scope="row"></th>
+                            <td id="teko-2">
+                                <a style='text-decoration:none' href="{{ org.website_url }}">
+                                    {{ org.business_name }}
+                                </a>
+                            </td>
+                            <td  id="teko" style="background-color:#02567a">{{ org.address }}</td>
+                            <td id="teko-2" class="d-flex justify-content-center align-items-center">{{ org.city }}</td>
+                            <td id="teko" class="" style="background-color:#02567a">{{ org.state }}</td>
+                            <!-- <td id="teko-2">{{ org.website_url }}</td> -->
+                            <!-- <td>{{ org.mission_statement}}</td> -->
+                          </tr>
+                          
+                        </tbody>
+                        {% endfor  %}
+                    </table>
+                </div>
+                
+    
             </div>
         </div>
+
+            
     </section>
     
     <script src="{% static 'js/pay.js' %}"></script>

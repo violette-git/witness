@@ -186,6 +186,39 @@ body {
 
 }
 
+#teko {
+
+    font-family: 'Teko', sans-serif;
+    font-weight:normal;
+    font-size: 1.8rem;
+    color:#d7dfe1
+}
+
+#teko-2 {
+
+    font-family: 'Teko', sans-serif;
+    font-weight:normal;
+    font-size: 1.8rem;
+    color:#093649;
+}
+
+#teko-3 {
+
+    font-family: 'Teko', sans-serif;
+    font-weight:normal;
+    font-size: 1.2rem;
+    color: #d7dfe1
+}
+
+#navbarDropdown {
+
+    font-family: 'Teko', sans-serif;
+    font-weight:normal;
+    font-size: 1.2rem;
+    color: #d7dfe1
+
+}
+
 
 
 @media (max-width: 768px) {
@@ -211,6 +244,23 @@ body {
 
     #layout :nth-child(4) {
         order: 3;
+    }
+}
+
+
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
     }
 }
 

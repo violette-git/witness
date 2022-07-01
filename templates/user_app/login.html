@@ -1,13 +1,14 @@
 {% load static %}
 
-<html lang="en"><head>
+<html lang="en">
+<head>
   <meta charset="utf-8">
   <title>Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-  <!-- Link Swiper's CSS -->
+  <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
   
@@ -15,37 +16,72 @@
 </head>
 
 
-<body>
+<body class="text-center" style="background-color:#02567a">
     {% include 'navbar.html'%}
     <div class="card" id="tester">
         test
     </div>
-    <section class="container">
-        <main class="form-signin">
-            <form action="{% url 'user_app:login' %}" method="POST">
-                <h1 class="h3 mb-3 fw-normal pt-4 pb-3">Please sign in</h1>
+    <main class="form-signin row">
+        <form action="{% url 'user_app:login' %}" method='POST' class="offset-2 col-8 mt-5 pt-5"style='border:2px solid #e98607; border-radius:8px;background-color:#d7dfe1'>
+            <svg class="" version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="17vw"  viewBox="0 0 601.000000 460.000000"
+ preserveAspectRatio="xMidYMid meet">
 
-                <div class="form-floating">
-                    <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Username">
-                    <label for="floatingInput">Username</label>
-                </div>
-                <div class="form-floating">
-                    <input type="password" name="password" class="form-control" id="floatingPassword"
-                        placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                </div>
-
-                <div class="checkbox mb-3">
-                    <label>
-                        <input type="checkbox" value="remember-me"> Remember me
-                    </label>
-                </div>
-                <button class="w-100 btn btn-lg btn-primary" style="background-color:#62B5E5;" type="submit">Sign
-                    in</button>
-                {% csrf_token %}
-            </form>
-        </main>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<g transform="translate(0.000000,460.000000) scale(0.100000,-0.100000)"
+fill="#e98607" stroke="none">
+<path d="M2983 3708 c-57 -15 -66 -41 -71 -211 -6 -191 7 -283 43 -314 14 -13
+39 -23 55 -23 16 0 41 10 55 23 36 30 48 120 44 313 -4 164 -6 171 -66 205
+-21 12 -36 14 -60 7z"/>
+<path d="M4255 3350 c-32 -13 -69 -58 -122 -150 -74 -128 -114 -214 -120 -258
+-5 -34 -2 -41 27 -65 43 -36 88 -36 122 1 75 81 234 358 223 391 -7 24 -80 91
+-98 90 -6 0 -21 -4 -32 -9z"/>
+<path d="M1680 3330 c-42 -42 -46 -87 -13 -155 9 -16 49 -86 90 -155 101 -170
+144 -199 212 -142 46 38 45 82 -5 181 -55 107 -132 232 -157 254 -47 41 -97
+47 -127 17z"/>
+<path d="M2905 2954 c-338 -25 -662 -149 -925 -353 -120 -92 -273 -250 -353
+-361 -90 -127 -197 -345 -242 -494 -48 -162 -67 -286 -69 -448 -1 -186 -10
+-178 206 -189 245 -12 2777 -11 2940 1 161 13 214 26 240 61 19 26 19 28 -1
+165 -34 237 -74 379 -155 563 -155 350 -441 663 -773 849 -159 89 -379 168
+-533 191 -77 12 -265 20 -335 15z m226 -215 c187 -19 311 -55 471 -136 293
+-149 580 -437 725 -728 71 -141 153 -419 153 -516 l0 -36 -332 -6 c-182 -4
+-844 -7 -1471 -7 l-1140 0 7 110 c11 188 49 325 138 505 105 210 232 367 402
+494 347 260 670 359 1047 320z"/>
+<path d="M824 2426 c-47 -47 -48 -99 -1 -143 50 -47 116 -88 228 -143 150 -73
+221 -66 236 23 5 35 2 41 -39 81 -64 61 -340 216 -385 216 -3 0 -20 -15 -39
+-34z"/>
+<path d="M5054 2426 c-89 -43 -217 -119 -271 -162 -49 -40 -60 -77 -39 -128
+28 -68 90 -62 256 26 182 97 230 138 230 199 0 30 -31 78 -55 85 -11 3 -27 7
+-35 10 -9 2 -47 -11 -86 -30z"/>
+<path d="M575 1293 c-59 -6 -99 -41 -99 -87 0 -81 68 -106 294 -106 147 0 215
+15 243 52 23 31 18 83 -12 120 -19 22 -23 23 -203 24 -100 1 -201 -1 -223 -3z"/>
+<path d="M5093 1293 c-74 -8 -122 -78 -92 -132 28 -50 57 -56 271 -56 184 0
+198 1 225 21 60 45 65 107 10 147 -23 18 -45 20 -199 22 -95 2 -192 1 -215 -2z"/>
+</g>
+            </svg>            
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      
+            <div class="form-floating">
+                <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Username">
+                <label for="floatingInput">Username</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" name="password" class="form-control" id="floatingPassword"
+                    placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>      
+            <div class="checkbox mb-3 pt-3 ">
+                <label>
+                <input class='pt-3' type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-" type="submit" style="background-color:#e98607">Sign in</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+            {% csrf_token %}
+        </form>
+    </main>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
 
 </body>
+
+</html>

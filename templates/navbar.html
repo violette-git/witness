@@ -8,7 +8,7 @@
                 preserveAspectRatio="xMidYMid meet">
                
                <g transform="translate(0.000000,460.000000) scale(0.100000,-0.100000)"
-               fill="#FFFFFF" stroke="none">
+               fill="#e98607" stroke="none">
                <path d="M2983 3708 c-57 -15 -66 -41 -71 -211 -6 -191 7 -283 43 -314 14 -13
                39 -23 55 -23 16 0 41 10 55 23 36 30 48 120 44 313 -4 164 -6 171 -66 205
                -21 12 -36 14 -60 7z"/>
@@ -46,27 +46,27 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 py-2 px-4 gap-4" style='font-weight:bold'>
-                <li class="nav-item dropdown" style='z-index: 999'>
-                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 py-2 px-4 gap-4" id="teko-3" style='font-weight:bold'>
+                <li id='teko-3' class="nav-item dropdown" style='z-index: 999'>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Register
                     </a>
                     <ul class="dropdown-menu" style="background-color:#093649; z-index: 999"
                         aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-light" href="{% url 'org_app:create-org' %}">Organization</a>
+                        <li><a  id='teko-3' class="dropdown-item  shadow-lg" href="{% url 'org_app:create-org' %}">Organization</a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="{% url 'user_app:profile' request.user %}">Profile</a>
+                <li id='teko-3' class="nav-item">
+                    <a id='teko-3' class="nav-link  " href="{% url 'user_app:profile' request.user %}">Profile</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="{% url 'user_app:logout' %}">Logout</a>
+                <li id='teko-3' class="nav-item">
+                    <a id='teko-3' class="nav-link" href="{% url 'user_app:logout' %}">Logout</a>
                 </li>
-                <li class="nav-item pr-5">
-                    <a class="btn btn-bd-download text-light text-decoration-none"
-                        style="background-color:#093649; font-weight:bold; border: 2px solid white"
+                <li id='teko-3' class="nav-item pr-5">
+                    <a id='teko-3' class="btn btn-bd-download text-decoration-none shadow-lg"
+                        style="background-color:#e98607; font-weight:bold;"
                         href="#">Download</a>
                 </li>
             </ul>
@@ -126,23 +126,23 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 py-2 px-4 gap-4" style='font-weight:bold'>
-                <li class="nav-item dropdown" style='z-index: 999'>
-                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                <li id='teko-3' class="nav-item dropdown" style='z-index: 999'>
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Register
                     </a>
                     <ul class="dropdown-menu shadow" style="background-color:#093649; z-index: 999"
                         aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-light" href="{% url 'user_app:register' %}">Member</a></li>
+                        <li><a  id='teko-3' class="dropdown-item " href="{% url 'user_app:register' %}">Member</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="{% url 'user_app:login' %}">Login</a>
+                <li  id='teko-3' class="nav-item">
+                    <a id='teko-3' class="nav-link text-light" href="{% url 'user_app:login' %}">Login</a>
                 </li>
-                <li class="nav-item pr-5">
-                    <a class="btn btn-bd-download text-light text-decoration-none"
-                        style="background-color:#093649; font-weight:bold; border: 2px solid white; margin-right: 40px"
-                        href="#">Download</a>
+                <li id='teko-3' class="nav-item pr-5 shadow-lg">
+                    <a id='teko-3' class="btn btn-bd-download text-decoration-none" style="background-color:#e98607; font-weight:bold; margin-right: 40px" href="#">
+                        Download
+                    </a>
                 </li>
             </ul>
 

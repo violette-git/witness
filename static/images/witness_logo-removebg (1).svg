@@ -1,32 +1,12 @@
-{% load static %}
-<!DOCTYPE html>
-
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <title>witness</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-  
-  
-</head>
-
-<body>
-  {% include 'navbar.html' %}
-  <!-- Swiper -->
-  <div class="swiper mySwiper swiper-initialized swiper-vertical swiper-pointer-events swiper-backface-hidden">
-    <div class="swiper-wrapper" id="swiper-wrapper-3a1a443022699be1" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
-      <div class="swiper-slide swiper-slide-active d-flex justify-content-center align-items-center"  role="group" aria-label="1 / 9" style="height: 534px; margin-bottom: 30px; background-color:#093649">
-        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="38vw" height="" viewBox="0 0 816.000000 736.000000"
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="816.000000pt" height="736.000000pt" viewBox="0 0 816.000000 736.000000"
  preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,736.000000) scale(0.100000,-0.100000)"
-fill="#e98607" stroke="none">
+fill="#000000" stroke="none">
 <path d="M4070 5013 c-26 -10 -30 -26 -30 -135 0 -113 9 -138 50 -138 41 0 50
 25 50 140 0 101 -2 110 -22 124 -24 17 -25 17 -48 9z"/>
 <path d="M3437 4832 c-10 -2 -22 -15 -28 -29 -8 -21 -2 -39 42 -114 58 -102
@@ -85,39 +65,4 @@ fill="#e98607" stroke="none">
 -136 396 l-124 367 -52 0 -53 0 11 -27z"/>
 <path d="M2420 2260 l0 -450 50 0 50 0 0 450 0 450 -50 0 -50 0 0 -450z"/>
 </g>
-        </svg>
-
-      </div>
-      <div class="swiper-slide swiper-slide-next d-flex justify-content-center align-items-center" style="background-color:#093649" role="group" aria-label="2 / 9" style="height: 534px; margin-bottom: 30px;">
-        Slide 2
-      </div>
-      <div class="swiper-slide d-flex justify-content-center align-items-center" style="background-color:#093649" role="group" aria-label="3 / 9" style="height: 534px; margin-bottom: 30px;">
-        Slide 3
-      </div>
-      <div class="swiper-slide d-flex justify-content-center align-items-center" style="background-color:#093649" role="group" aria-label="4 / 9" style="height: 534px; margin-bottom: 30px;">
-        Slide 4
-      </div>
-
-    </div>
-    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-vertical"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9"></span></div>
-  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      direction: "vertical",
-      slidesPerView: 1,
-      spaceBetween: 0,
-      mousewheel: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
-</body></html>
+</svg>
