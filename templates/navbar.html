@@ -54,19 +54,19 @@
                     </a>
                     <ul class="dropdown-menu" style="background-color:#093649; z-index: 999"
                         aria-labelledby="navbarDropdown">
-                        <li><a  id='teko-3' class="dropdown-item" href="{% url 'org_app:create-org' %}">Organization</a>
+                        <li><a  id='teko-3' class="dropdown-item  shadow-lg" href="{% url 'org_app:create-org' %}">Organization</a>
                         </li>
                     </ul>
                 </li>
                 <li id='teko-3' class="nav-item">
-                    <a id='teko-3' class="nav-link " href="{% url 'user_app:profile' request.user %}">Profile</a>
+                    <a id='teko-3' class="nav-link  " href="{% url 'user_app:profile' request.user %}">Profile</a>
                 </li>
                 <li id='teko-3' class="nav-item">
                     <a id='teko-3' class="nav-link" href="{% url 'user_app:logout' %}">Logout</a>
                 </li>
                 <li id='teko-3' class="nav-item pr-5">
-                    <a id='teko-3' class="btn btn-bd-download text-light text-decoration-none"
-                        style="background-color:#e98607; font-weight:bold; border: 2px solid white"
+                    <a id='teko-3' class="btn btn-bd-download text-decoration-none shadow-lg"
+                        style="background-color:#e98607; font-weight:bold;"
                         href="#">Download</a>
                 </li>
             </ul>
@@ -139,10 +139,10 @@
                 <li  id='teko-3' class="nav-item">
                     <a id='teko-3' class="nav-link text-light" href="{% url 'user_app:login' %}">Login</a>
                 </li>
-                <li id='teko-3' class="nav-item pr-5">
-                    <a id='teko-3' class="btn btn-bd-download text-light text-decoration-none"
-                        style="background-color:#093649; font-weight:bold; border: 2px solid white; margin-right: 40px"
-                        href="#">Download</a>
+                <li id='teko-3' class="nav-item pr-5 shadow-lg">
+                    <a id='teko-3' class="btn btn-bd-download text-decoration-none" style="background-color:#e98607; font-weight:bold; margin-right: 40px" href="#">
+                        Download
+                    </a>
                 </li>
             </ul>
 
