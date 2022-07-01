@@ -8,5 +8,6 @@ urlpatterns = [
 
     path('register-org/', views.create_org, name='create-org'),
     path('orgs/', views.orgs, name='orgs'),
+    
 
 ] 

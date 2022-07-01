@@ -1,10 +1,15 @@
 from django.shortcuts import get_object_or_404, render, redirect
+from django.urls.base import reverse
 from django.shortcuts import render
 from .models import Organization
-from django.urls.base import reverse
+from django.db.models import Q
+import requests
+import json
 from django.contrib.auth import (
     get_user_model,
 )
+
+
 
 # Create your views here.
 def create_org(request):
@@ -27,11 +32,20 @@ def create_org(request):
 
         mission_statement = form.get('mission_statement')
 
-        is_nonprofit = form.get('is_nonprofit')     
+        is_nonprofit = form.get('is_nonprofit') 
+
+        address = form.get('address') 
+
+        city = form.get('city')
+
+        state = form.get('state')  
 
         organization = Organization.objects.create(
 
             business_name = business_name,
+            address = address,
+            city = city,
+            state = state,
             website_url = website_url,
             facebook_url = facebook_url,
             mission_statement = mission_statement,
@@ -46,6 +60,19 @@ def orgs(request):
 
     organizations = Organization.objects.all()
 
+    if request.method == 'POST':
+
+        form = request.POST
+
+        search = form.get('search') or ''
+
+        if search:
+
+            organizations = organizations.filter(
+
+                Q(name__icontains=search)
+            )
+
     context = {
 
         'organizations':organizations,
@@ -53,8 +80,8 @@ def orgs(request):
 
     if request.method == 'GET':
 
-        return render(request, 'mem-dashboard.html', context)
+        return render(request, 'org_app/organizations.html', context)
 
 
 
-    return render(request, 'mem-dashboard.html', context)
+    return render(request, 'org_app/organizations.html', context)

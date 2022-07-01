@@ -33,25 +33,40 @@
     <div class="card" id="tester">
         test
     </div>
-    <section class="container">
+    <section class="container-fluid" style="background-color:#02567a">
         
         <form action="{% url 'org_app:create-org' %}" method="POST">
             <div class="row">
-                <div class=" col-12 d-flex justify-content-center align-items-center" style="background-color:#62B5E5">
-                    <div class="card mx-2 mt-3 mb-3 col-6 shadow-lg" style="border: 2px solid black">
-                        <div class="mb-1 p-2 col-12">
+                <div class=" col-12 d-flex justify-content-center align-items-center pt-5" >
+                    <div class="card mx-2 mt-3 mb-3 col-8 shadow-lg d-flex justify-content-center align-items-center" style="border: 2px solid black">
+                        <h1 class=" d-flex justify-content-center align-items-center py-4">
+                            Register An Organization
+                        </h1>
+                        <div class="mb-1 p-2 col-xs-12 col-sm-12 col-md-12 col-lg-9">
                             <label for="business_name" class="form-label"></label>
                             <input type="text" class="form-control" id="business_name" name="business_name" placeholder="Business Name">
                         </div>
-                        <div class="mb-1 p-2 col-12">
+                        <div class="mb-1 p-2 col-xs-12 col-sm-12 col-md-12 col-lg-9">
                             <label for="website_url" class="form-label"></label>
                             <input type="url" class="form-control" id="website_url" name="website_url" placeholder="Website">
                         </div>
-                        <div class="mb-1 p-2 col-12">
+                        <div class="mb-1 p-2 col-xs-12 col-sm-12 col-md-12 col-lg-9">
                             <label for="facebook_url" class="form-label"></label>
                             <input type="url" class="form-control" id="facebook_url" name="facebook_url" placeholder="Facebook">
                         </div>
-                        <div class="mb-1 p-2 col-12">
+                        <div class="mb-1 p-2 col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                            <label for="address" class="form-label"></label>
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Address">
+                        </div>
+                        <div class="mb-1 p-2 col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                            <label for="city" class="form-label"></label>
+                            <input type="text" class="form-control" id="city" name="city" placeholder="City">
+                        </div>
+                        <div class="mb-1 p-2 col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                            <label for="state" class="form-label"></label>
+                            <input type="text" class="form-control" id="state" name="state" placeholder="State">
+                        </div>
+                        <div class="mb-1 p-2 col-xs-12 col-sm-12 col-md-12 col-lg-9">
                             <label for="mission_statement" class="form-label"></label>
                             <textarea  class="form-control" id="mission_statement" name="mission_statement" placeholder="Mission Statement" style="resize:none" rows="5"></textarea>
                         </div>
