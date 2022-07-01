@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from tithe_app.models import Need, Offering
 from user_app.models import User
 from django.contrib.auth.decorators import login_required
+from decimal import Decimal
 
 # Create your views here.
 
@@ -9,7 +10,7 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def create(request):
 
-    if not request.user.is_authenticated():
+    if not request.user.is_authenticated:
 
         return render(request, 'user_app/login.html')
 
@@ -43,8 +44,18 @@ def create(request):
         return render(request, 'tithe_app/need.html', context)
 
     else:
+
+        context = {
+
+        'needs': Need.objects.all().order_by('-date_created')
         
-        return render(request, 'tithe_app/create_need.html')
+        }
+        
+        return render(request, 'tithe_app/need.html', context)
+
+
+
+
 
 @login_required
 def needsbutton(request):
@@ -57,32 +68,77 @@ def needsbutton(request):
     }
     return render(request, 'tithe_app/need.html', context)
 
+
+
+    
+
+
+
+def need_details(request, need_id):
+
+    need = get_object_or_404(Need, pk=need_id)   
+    
+
+    context = {
+        
+        'need':need,
+        'needs': Need.objects.all().order_by('-date_created'),
+        'users': User.objects.all(),
+    }
+
+    
+    
+    return render(request, 'tithe_app/need_details.html', context)
+
+
+
+
+
 @login_required
-def contribute(request):
+def contribute(request, need_id):
+
+    need = get_object_or_404(Need, pk=need_id)
+
+    context = {
+
+        'need':need
+    }
 
     if request.method == 'GET':
         
-        return render(request, 'tithe_app/contribute.html')
+        
+        return render(request, 'tithe_app/contribute.html', context)
 
     if request.method == 'POST':
 
         form = request.POST
 
-        amount = form.get('amount')
+        amount = Decimal(form.get('amount'))
 
-        contribution = Offering.objects.all()
+        # do logic for entering a string
 
-        # need = contribution.
+        # is_tithe = form.get('is_tithe')
 
-        # print(need)
+        context = {
 
+        'need':need,
+        'needs': Need.objects.all().order_by('-date_created'),
+        'users': User.objects.all(),
+        }
+        
         Offering.objects.create(
 
             amount=amount,
             user=request.user,
-            # need=need
+            need=need,
+
+            # is_tithe=is_tithe
 
         )
 
-        return render(request, 'tithe_app/need.html')
+        need.donated_amount += amount
+
+        need.save()
+
+        return redirect('tithe_app:create')
         

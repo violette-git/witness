@@ -105,4 +105,7 @@ def logout(request):
 
 # ----------------------------------------------------------------------------
 
+def test(request):
+
+    return render(request, 'test.html')
 

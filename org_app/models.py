@@ -7,7 +7,15 @@ from tithe_app.models import Offering
 min = 0.00
 class Organization(models.Model):
 
-    business_name = models.CharField(max_length=70)
+    business_name = models.CharField(max_length=70,blank=True, null=True)
+
+    address = models.CharField(max_length=70,blank=True, null=True)
+
+    city = models.CharField(max_length=70,blank=True, null=True)
+
+    state = models.CharField(max_length=70,blank=True, null=True)
+
+    tagline = models.CharField(max_length=500,blank=True, null=True)
 
     website_url = models.URLField(max_length=200, blank=True, null=True)
 

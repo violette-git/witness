@@ -1,8 +1,16 @@
 
 @import url('http://getbootstrap.com/dist/css/bootstrap.css');
 
+#create {
+    
+    font-family: 'Teko', sans-serif;
+    font-weight:bold;
+    font-size: 11vw;
+    color:#d7dfe1
+}
+
 #fixed-nav {
-    background-color:#a11477;
+    background-color:#093649;
     z-index:999;
     overflow: visible;
     /* position: absolute; */
@@ -49,7 +57,7 @@ body {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: #d7dfe1;
 
 /* Center slide text vertically */
     display: -webkit-box;
@@ -103,7 +111,7 @@ body {
 #icons {
 
     font-size: 4vw;
-    color:white
+    color:#d7dfe1
 }
 
 #welcome {
@@ -154,64 +162,62 @@ body {
   'opsz' 48
 }
 
-/* @media only screen and (min-width: 3072px) {
-    #custom-card-1 {
-        display:flex;
-        flex-direction: row;
-        width:150px;
+
+#description {
+
+    resize:none;
+    border-radius: 6px;
+}
+
+#nav-font {
+
+    font-family: 'Teko', sans-serif;
+    /* font-weight:bold; */
+    font-size: 25px;
+    color:#d7dfe1
+}
+
+#layout-2 {
+
+    font-family: 'Teko', sans-serif;
+    /* font-weight:bold; */
+    font-size: 40px;
+    color:#d7dfe1
+
+}
 
 
-    }
 
-    #welcome {
+@media (max-width: 768px) {
 
-        font-size:150px
-    }
     
-    #icons {
-        font-size: 60px
-    }
-} */
 
-/* @media (max-width: 100px) {
-    
-    #bar :nth-child(1) {
+    #layout {
+        display: flex;
+        /* flex-direction: column; */
+    }
+
+    #layout :nth-child(1) {
         order: 1;
     }
-    
-    #bar :nth-child(2) {
-        order: 3;
-    }
-    
-    #bar :nth-child(3) {
+
+    #layout :nth-child(2) {
         order: 2;
     }
-} */
+    
+    #layout :nth-child(3) {
+        order: 4;
+    }
 
-/* #custom-card-2 {
-
-    padding-left: 30px;
-} */
-
-/* #custom-card-3 {
-
-    padding-left: 30px;
-    z-index:2;
-
-} */
+    #layout :nth-child(4) {
+        order: 3;
+    }
+}
 
 
 
-
-
-
-/* #pass-under {
-
-    position: relative;
-    z-index: 1;
-} */
-
-
-/* colour1: #e13661 red
-colour2: #fd4c55 orange
-colour3: #a11477 purple */
+/* colour1: #093649 blue dark
+colour2: #02567a blue light
+colour3: #b6510d burnt orange
+colour4: #e98607 orange
+colour5: #d7dfe1 white */
