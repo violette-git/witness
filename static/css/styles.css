@@ -210,6 +210,15 @@ body {
     color: #d7dfe1
 }
 
+#teko-4 {
+
+    font-family: 'Teko', sans-serif;
+    font-weight:bold;
+    font-size: 1.8rem;
+    color: #093649;
+    padding-bottom: 20px
+}
+
 #navbarDropdown {
 
     font-family: 'Teko', sans-serif;

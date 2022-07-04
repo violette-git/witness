@@ -1,45 +1,46 @@
 let nums = document.querySelectorAll('.myChart');
+// let bums = document.querySelector('.chart')
 
 
 nums.forEach((num)=>{
 
     const ctx = document.getElementById('myChart-'+ num.attributes.value.value);
     
-    // const totalX = document.getElementById('amount-don-'+ num.attributes.value.value)
+    const totalX = document.getElementById('amount-don-'+ num.attributes.value.value)
+
+    const remainderX = document.getElementById('cost-' + num.attributes.value.value)
+
+    let remainder = remainderX.attributes.value.value - totalX.attributes.value.value
+
+    let total = totalX.attributes.value.value
+    
+    console.log(remainderX.attributes.value.value)
+    console.log(total)
+    console.log(remainder)
     
     // console.log(totalX.attributes.value)
-
-    const percentageX = document.getElementById('perc-don-'+ num.attributes.value.value)
-
-    let percentage = percentageX.attributes.value.value
-
-    // console.log(parseInt(percentage))
-
-    let percentageTotal = 100
     
-    let percentage_total = (percentageTotal - percentage)
-    console.log(percentage_total)
-    console.log(percentage)
+    
     
 
-const myChart = new Chart(ctx, {
-    type: 'pie',
+    const myChart = new Chart(ctx, {
+    type: 'doughnut',
     data: {
-        // labels: ['percent donated', 'remaining amount'],
+        labels: ['Donated', 'Remaining'],
         datasets: [{
             // label: '# of Votes',
-            data: [percentage, percentage_total],
+            data: [total, remainder],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
+                'rgba(182,81,13,255)',
+                'rgba(9,54,73,255)',
                 
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
+                'rgb(215,223,225)',
+                'rgb(215,223,225)',
                 
             ],
-            borderWidth: 1,
+            borderWidth: 2,
             hoverOffset: 20
         }]
     },
@@ -47,8 +48,5 @@ const myChart = new Chart(ctx, {
 });
 
 })
-
-
-
 
 

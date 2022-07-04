@@ -24,7 +24,7 @@
                 <main class="form-signin row d-flex justify-content-center align-items-center">
                     
                     <form action="{% url 'tithe_app:contribute' need.id %}" class="col-12 pb-5" method="POST">
-                        <h1 class=" d-flex justify-content-center pt-4">Title{{ need.title }}</h1>
+                        <h1 class=" d-flex justify-content-center pt-4">{{ need.title|title }}</h1>
             
                         <div class="form-floating pb-2">
                             <input type="text" name="amount" class="form-control" id="amount" placeholder="amount">
