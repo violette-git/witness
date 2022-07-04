@@ -70,6 +70,8 @@
         {% if request.user.is_authenticated %}
         <a id="nav-font" href="#" class="w3-bar-item w3-button">Contributions</a> {% endif %}
         <a id="nav-font" href="{% url 'tithe_app:needsbutton' %}" class="w3-bar-item w3-button">Needs</a>
+        <a id="nav-font" href="{% url 'user_app:logout' %}" class="w3-bar-item w3-button d-flex flex-end">Logout</a>
+
     </div>
     <section class="container-fluid p-0">
         <div class="w3-main row shadow-lg" style="margin-left:150px;">
